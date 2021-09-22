@@ -8,7 +8,7 @@ def pytest_addoption(parser):
 
 @pytest.fixture()
 def language(request):
-    yield request.config.getoption("--language")
+    return request.config.getoption("--language")
 
 
 @pytest.fixture(scope="function")
